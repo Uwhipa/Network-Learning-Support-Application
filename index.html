@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+  <title>Version 4.0</title>
+  <link rel="stylesheet" type="text/css" href="intro.js-2.5.0/introjs.css">
+  <style type="text/css">
+    body {
+      background:#A1B1C1;
+      margin:15px 15px;
+    }
+    div#holder{
+      position: absolute;
+      background:#ffffff;
+      float: left;
+      max-width: 750px;
+      width: 65%;
+      height:500px;
+      margin: auto;
+      overflow-x: overlay;
+      overflow-y: hidden;
+      border:1px solid #000000
+    }
+    div#destineIP{
+      position: relative;
+      float: right;
+      clear: left;
+      background:#efefef;
+      max-width: 350px;
+      width: 35%;
+      height:500px;
+      overflow: overlay;
+      border:1px solid #000000
+    }
+    div#IP_Indication{
+      position:absolute;
+      float: left;
+      top:555px;
+      background:#FFD700;
+      width: 75%;
+      border-bottom:3px double #696969;
+      border-left:3px double #FFFF00;
+      border-right:3px double #696969;
+      border-top:3px double #FFFF00;
+      padding:7px 5px;
+    }
+    div#ttl_count{
+      position:relative;
+      float: right;
+      clear: left;
+      top:555px;
+      background:#FFFFCC;
+      width: 25%;
+      border-bottom:3px double #696969;
+      border-left:3px double #FFFF00;
+      border-right:3px double #696969;
+      border-top:3px double #FFFF00;
+      padding:7px 5px;
+    }
+
+    div#block{
+      position: absolute;
+      width: 95%;
+      margin-top: inherit;
+    }
+
+    div#ttl_indic{
+      position:absolute;
+      width: 95%;
+    }
+
+    form#btn{
+      display: flex;
+    }
+
+    input[type="button"]{
+      background:#B0C4DE;
+      border-bottom:3px double #609dd1;
+      border-left:3px double #c0e8ff;
+      border-right:3px double #609dd1;
+      border-top:3px double #c0e8ff;
+      color:#000000;
+      cursor:pointer;
+      display:block;
+      margin:0 5px 5px 0;
+      float:left;
+      padding:2px;
+      text-align:center;
+      text-decoration:none;
+      height:30px;
+      width:80px;
+      -moz-border-radius:3px;
+      -opera-border-radius:3px;
+      -webkit-border-radius:3px;
+    }
+
+
+    input[type=button]:hover{
+      border-bottom:2px double #609dd1;
+      border-left:4px double #c0e8ff;
+      border-right:2px double #609dd1;
+      border-top:4px double #c0e8ff;
+    }
+    table {
+      margin: 10px 25px;
+      color: #666;
+      border: 1px solid #666;
+      border-collapse: separate;
+      border-spacing: 1px;
+      font-size: 11px;
+    }
+    th {
+      color:#444;
+      padding:4px;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #666;
+      background-color: lightblue;
+    }
+    td {
+      padding: 2px 4px;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+      font-size: 12px;
+    }
+    #destination {
+      width: 120px;
+    }
+    #interface {
+      width: 100px;
+    }
+    #nexthop {
+      width: 100px;
+    }
+    #metric {
+      width: 50px;
+    }
+  </style>
+  <link rel="stylesheet" href="jquery-ui-1.9.0.custom/development-bundle/themes/base/jquery.ui.all.css">
+  <script type="text/javascript" src="jquery-ui-1.9.0.custom/js/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="jquery-ui-1.9.0.custom/js/jquery-ui-1.9.0.custom.min.js"></script>
+  <script type="text/javascript" src="raphael.js"></script>
+  <script type="text/javascript" src="NWSvarSVGv.4.0 - EnglishV1.js"></script>
+  <script type="text/javascript" src="intro.js-2.5.0/intro.js"></script>
+</head>
+<body>
+<form id="btn"></form>
+<select id='language_select'  onchange='language_change()'>
+  <option value='ja'>日本語</option>
+  <option value='fr'>Français</option>
+  <option value='en' selected>English</option>
+  <option value='pt'>Português</option>
+</select>
+<div id="block">
+  <div id="holder"></div>
+  <div id="destineIP" class="ui-widget-content">
+    <table>
+      <thead>
+        <tr id="TableRow"></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+<div id="ttl_indic">
+  <div id="IP_Indication"></div>
+  <div id="ttl_count"></div>
+</div>
+<script type="text/javascript">
+  arrayinit();
+  init();
+  jQuery( function() {
+     //jQuery( '#destineIP' ) . draggable();
+  } );
+  window.onload = function() {
+    draw();
+  };
+</script>
+
+</body>
+</html>
