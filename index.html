@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,34 +11,24 @@
       margin:15px 15px;
     }
     div#holder{
-      position: absolute;
       background:#ffffff;
       float: left;
       max-width: 750px;
-      width: 65%;
+      width: 60%;
       height:500px;
-      margin: auto;
-      overflow-x: overlay;
-      overflow-y: hidden;
       border:1px solid #000000
     }
     div#destineIP{
-      position: relative;
-      float: right;
-      clear: left;
       background:#efefef;
-      max-width: 350px;
-      width: 35%;
       height:500px;
       overflow: overlay;
       border:1px solid #000000
     }
     div#IP_Indication{
-      position:absolute;
-      float: left;
       top:555px;
       background:#FFD700;
-      width: 75%;
+      max-width: 752px;
+      width: 200%;
       border-bottom:3px double #696969;
       border-left:3px double #FFFF00;
       border-right:3px double #696969;
@@ -45,12 +36,9 @@
       padding:7px 5px;
     }
     div#ttl_count{
-      position:relative;
-      float: right;
-      clear: left;
       top:555px;
       background:#FFFFCC;
-      width: 25%;
+      width: 100%;
       border-bottom:3px double #696969;
       border-left:3px double #FFFF00;
       border-right:3px double #696969;
@@ -59,18 +47,18 @@
     }
 
     div#block{
-      position: absolute;
+      display: flex;
       width: 95%;
-      margin-top: inherit;
     }
 
     div#ttl_indic{
-      position:absolute;
+      display: flex;
       width: 95%;
+      max-width: 1217px;
     }
 
     form#btn{
-      display: flex;
+      display: block;
     }
 
     input[type="button"]{
@@ -145,7 +133,7 @@
 </head>
 <body>
 <form id="btn"></form>
-<a id="link" href="https://goo.gl/Mu5pzP"></a>
+<!--<a id="link" href="https://goo.gl/Mu5pzP"></a>-->
 <select id='language_select'  onchange='language_change()'>
   <option value='ja'>日本語</option>
   <option value='fr'>Français</option>
