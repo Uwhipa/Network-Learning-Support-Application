@@ -66,6 +66,7 @@ app.translations = {
       right:"Right",
       left:"Left",
       help:"Help",
+      intro_first_start:"This program allows to simulate the operation of a network, in particular the sending of packets from one host to another via routers. First add routers and hosts, then connect them to each other to begin. Note: To select an item, you may need to click a bit below it. We apologize for the inconvenience.",
       intro:"This program can simulate the operation of a network, in particular the sending of packets from one host to another via routers.",
       intro_router:"Use this button to add a router to the current network.",
       intro_host:"Use this button to add a host to the current network.",
@@ -89,7 +90,7 @@ app.translations = {
       intro_nexthop:"This column lists the IP addresses that can be reached on the next hop. In red, the IP address of the next router, or the destination host if only one jump is required.",
       intro_metric:"This column lists the number of jumps needed to reach the network described on the left. In red, the number of jump required to reach the destination network.",
       intro_ttl_count:"Here is the remaining lifetime (Time To Live) of the packet. This value decreases by 1 at each jump. If it reaches 0 before the packet arrives at destination, the transmission fails. This is to prevent the packet from ending up in an infinite routing loop.",
-
+      link:"Scoring questionnaire",
   }
   ,ja:{
       place_router:"ルータを配置したい場所をクリックしてください。",
@@ -124,6 +125,7 @@ app.translations = {
       right:"右",
       left:"左",
       help:"手助け",
+      intro_first_start:"このプログラムは、特に、ルータを介して別のホストからのパケットの送信、ネットワークの動作をシミュレートします。最初に開始するためにそれらを一緒に接続し、ルータとホストを追加します。注意：それはそれはアイテムを選択することであってもよい、あなたは少しその下をクリックする必要があります。この不便をおかけして申し訳ございません。",
       intro:"このプログラムは、ネットワークの動作をシミュレートすることができます。特に、ルータを経由してあるホストから別のホストにパケットを送信します。",
       intro_router:"このボタンを使用して、現在のネットワークにルータを追加します。",
       intro_host:"このボタンを使用して、現在のネットワークにホストを追加します。",
@@ -147,7 +149,7 @@ app.translations = {
       intro_nexthop:"この列には、次のホップで到達できるIPアドレスがリストされます。 赤色では、次のルータのIPアドレス、または1回だけのジャンプが必要な場合の宛先ホスト。",
       intro_metric:"この列には、左に記載されているネットワークに到達するために必要なジャンプ数が表示されます。 赤色では、宛先ネットワークに到達するために必要なジャンプの数。",
       intro_ttl_count:"ここに、パケットの残りの有効期間（Time To Live）があります。 この値はジャンプごとに1ずつ減少します。 パケットが宛先に到着する前に0に達すると、送信は失敗します。 これはパケットが無限のルーティングループで終わるのを防ぐためです。",
-
+      link:"アンケート",
   }
   ,fr:{
       place_router:"Veuillez cliquer à l'endroit où vous désirez placer le routeur.",
@@ -182,6 +184,7 @@ app.translations = {
       right:"à droite",
       left:"à gauche",
       help:"Aide",
+      intro_first_start:"Ce programme permet de simuler le fonctionnement d'un réseau, en particulier l'envoi de paquets d'un hôte à un autre via des routeurs. Ajoutez d'abord des routeurs et des hôtes, puis reliez-les entre eux pour commencer. Note: il se peut que pour sélectionner un élément, vous ayez besoin de cliquer un peu en dessous de celui-ci. Veuillez nous excuser pour ce désagrément.",
       intro:"Ce programme permet de simuler le fonctionnement d'un réseau, en particulier l'envoi de paquets d'un hôte à un autre via des routeurs.",
       intro_router:"Utilisez ce bouton pour ajouter un routeur au réseau actuel.",
       intro_host:"Utilisez ce bouton pour ajouter un hôte au réseau actuel.",
@@ -205,6 +208,7 @@ app.translations = {
       intro_nexthop:"Cette colonne liste les adresses IP qui peuvent être atteinte lors du prochain saut. En rouge, l'adresse IP du prochain routeur, ou de l'hôte de destination s'il ne reste plus qu'un saut nécessaire.",
       intro_metric:"Cette colonne liste le nombre de saut nécessaire pour atteindre le réseau de gauche. En rouge, le nombre de saut nécessaire pour atteindre le réseau de destination.",
       intro_ttl_count:"Ici, la durée de vie restante (Time To Live) du paquet. Cette valeur décroit de 1 à chaque saut. Si elle atteint 0 avant que le paquet soit arrivé à destinatiob, la transmission échoue. Cela sert à éviter que le paquet ne se retrouve dans une boucle de routage infinie.",
+      link:"Questionnaire de notation"
   },
   pt:
   {
@@ -240,6 +244,7 @@ app.translations = {
     right:"Na direita",
     left:"Na esquerda",
     help:"Ajuda",
+    intro_first_start:"Este programa simula o funcionamento de uma rede, em particular o envio de pacotes a partir de um hospedeiro para outro através de routers. Primeiro adicione roteadores e hosts, em seguida, conectá-los juntos para começar. Nota: pode ser que para selecionar um item, você precisa clicar em um pouco abaixo dela. Pedimos desculpas pelo inconveniente.",
     intro:"Este programa pode simular a operação de uma rede, em particular o envio de pacotes de um host para outro através de roteadores.",
     intro_router:"Use este botão para adicionar um roteador à rede atual.",
     intro_host:"Use este botão para adicionar um host à rede atual.",
@@ -254,6 +259,7 @@ app.translations = {
     intro_step:"Use este botão para iniciar a simulação animada no modo passo a passo.",
     intro_add:"Use este botão para retornar à tela de criação de rede.",
     intro_speed:"Use este menu suspenso para alterar a velocidade da animação.",
+    intro_step3:"Agora que a rede está configurada, o programa poderá iniciar uma simulação animada do caminho percorrido por um pacote entre dois hosts.",
     explanations:"Explicar",
     intro_explanations:"Use este botão para ler explicações de como a simulação funciona.",
     intro_table_row:"Esta tabela descreve toda a rede criada para a simulação. A rede de destino está escrita em vermelho.",
@@ -262,10 +268,23 @@ app.translations = {
     intro_nexthop:"Esta coluna lista os endereços IP que podem ser alcançados no próximo salto. Em vermelho, o endereço IP do próximo roteador ou o host de destino, se apenas um salto for necessário.",
     intro_metric:"Esta coluna lista o número de saltos necessários para alcançar a rede descrita à esquerda. Em vermelho, o número de salto necessário para alcançar a rede de destino.",
     intro_ttl_count:"Aqui está o tempo de vida restante (Time To Live) do pacote. Esse valor diminui em 1 em cada salto. Se atingir 0 antes do pacote chegar ao destino, a transmissão falhará. Isto é para evitar que o pacote termine em um loop de roteamento infinito.",
+    link:"Classificação questionário",
   }
 };
 
 var currentLanguage = document.documentElement.lang || "en";
+
+function start(){
+  var introJS = introJs();
+  introJS.setOptions({
+    steps:[
+      {
+        intro:getText("intro_first_start")
+      }
+    ]
+  })
+  introJS.start();
+}
 
 function help(){
   var introJS = introJs();
@@ -863,10 +882,12 @@ function decision()
 function init()
 {
   app.lang = app.translations[currentLanguage] || app.translations.en;
+  document.getElementById('link').innerHTML=""+getText('link');
   document.getElementById('TableRow').innerHTML="<th id='destination'>"+getText('destination_network')+"</th><th id='interface'>"+getText('interface')
   +"</th><th id='nexthop'>"+getText('nexthop')
   +"</th><th id='metric'>"+getText('metric')
   +"</th>";
+  start();
     if(stepcnt!=0){
     line[linenumber].attr({stroke:"#000","stroke-width":1});
     ccount=IPad[next].y+(15*IPad[next].x);
