@@ -90,11 +90,8 @@ app.translations = {
       intro_nexthop:"This column lists the IP addresses that can be reached on the next hop. In red, the IP address of the next router, or the destination host if only one jump is required.",
       intro_metric:"This column lists the number of jumps needed to reach the network described on the left. In red, the number of jump required to reach the destination network.",
       intro_ttl_count:"Here is the remaining lifetime (Time To Live) of the packet. This value decreases by 1 at each jump. If it reaches 0 before the packet arrives at destination, the transmission fails. This is to prevent the packet from ending up in an infinite routing loop.",
-<<<<<<< HEAD
       link:"Scoring questionnaire",
-=======
 
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
   }
   ,ja:{
       place_router:"ルータを配置したい場所をクリックしてください。",
@@ -153,11 +150,8 @@ app.translations = {
       intro_nexthop:"この列には、次のホップで到達できるIPアドレスがリストされます。 赤色では、次のルータのIPアドレス、または1回だけのジャンプが必要な場合の宛先ホスト。",
       intro_metric:"この列には、左に記載されているネットワークに到達するために必要なジャンプ数が表示されます。 赤色では、宛先ネットワークに到達するために必要なジャンプの数。",
       intro_ttl_count:"ここに、パケットの残りの有効期間（Time To Live）があります。 この値はジャンプごとに1ずつ減少します。 パケットが宛先に到着する前に0に達すると、送信は失敗します。 これはパケットが無限のルーティングループで終わるのを防ぐためです。",
-<<<<<<< HEAD
       link:"アンケート",
-=======
 
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
   }
   ,fr:{
       place_router:"Veuillez cliquer à l'endroit où vous désirez placer le routeur.",
@@ -216,10 +210,7 @@ app.translations = {
       intro_nexthop:"Cette colonne liste les adresses IP qui peuvent être atteinte lors du prochain saut. En rouge, l'adresse IP du prochain routeur, ou de l'hôte de destination s'il ne reste plus qu'un saut nécessaire.",
       intro_metric:"Cette colonne liste le nombre de saut nécessaire pour atteindre le réseau de gauche. En rouge, le nombre de saut nécessaire pour atteindre le réseau de destination.",
       intro_ttl_count:"Ici, la durée de vie restante (Time To Live) du paquet. Cette valeur décroit de 1 à chaque saut. Si elle atteint 0 avant que le paquet soit arrivé à destinatiob, la transmission échoue. Cela sert à éviter que le paquet ne se retrouve dans une boucle de routage infinie.",
-<<<<<<< HEAD
       link:"Questionnaire de notation"
-=======
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
   },
   pt:
   {
@@ -270,10 +261,6 @@ app.translations = {
     intro_step:"Use este botão para iniciar a simulação animada no modo passo a passo.",
     intro_add:"Use este botão para retornar à tela de criação de rede.",
     intro_speed:"Use este menu suspenso para alterar a velocidade da animação.",
-<<<<<<< HEAD
-    intro_step3:"Agora que a rede está configurada, o programa poderá iniciar uma simulação animada do caminho percorrido por um pacote entre dois hosts.",
-=======
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
     explanations:"Explicar",
     intro_explanations:"Use este botão para ler explicações de como a simulação funciona.",
     intro_table_row:"Esta tabela descreve toda a rede criada para a simulação. A rede de destino está escrita em vermelho.",
@@ -282,10 +269,8 @@ app.translations = {
     intro_nexthop:"Esta coluna lista os endereços IP que podem ser alcançados no próximo salto. Em vermelho, o endereço IP do próximo roteador ou o host de destino, se apenas um salto for necessário.",
     intro_metric:"Esta coluna lista o número de saltos necessários para alcançar a rede descrita à esquerda. Em vermelho, o número de salto necessário para alcançar a rede de destino.",
     intro_ttl_count:"Aqui está o tempo de vida restante (Time To Live) do pacote. Esse valor diminui em 1 em cada salto. Se atingir 0 antes do pacote chegar ao destino, a transmissão falhará. Isto é para evitar que o pacote termine em um loop de roteamento infinito.",
-<<<<<<< HEAD
     link:"Classificação questionário",
-=======
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
+
   }
 };
 
@@ -899,18 +884,12 @@ function decision()
 function init()
 {
   app.lang = app.translations[currentLanguage] || app.translations.en;
-<<<<<<< HEAD
   document.getElementById('link').innerHTML=""+getText('link');
-=======
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
   document.getElementById('TableRow').innerHTML="<th id='destination'>"+getText('destination_network')+"</th><th id='interface'>"+getText('interface')
   +"</th><th id='nexthop'>"+getText('nexthop')
   +"</th><th id='metric'>"+getText('metric')
   +"</th>";
-<<<<<<< HEAD
   start();
-=======
->>>>>>> b7f331000281bd886115af66b9a6746d4cef1914
     if(stepcnt!=0){
     line[linenumber].attr({stroke:"#000","stroke-width":1});
     ccount=IPad[next].y+(15*IPad[next].x);
