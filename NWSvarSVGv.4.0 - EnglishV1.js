@@ -91,6 +91,7 @@ app.translations = {
       intro_metric:"This column lists the number of jumps needed to reach the network described on the left. In red, the number of jump required to reach the destination network.",
       intro_ttl_count:"Here is the remaining lifetime (Time To Live) of the packet. This value decreases by 1 at each jump. If it reaches 0 before the packet arrives at destination, the transmission fails. This is to prevent the packet from ending up in an infinite routing loop.",
       link:"Scoring questionnaire",
+
   }
   ,ja:{
       place_router:"ルータを配置したい場所をクリックしてください。",
@@ -150,6 +151,7 @@ app.translations = {
       intro_metric:"この列には、左に記載されているネットワークに到達するために必要なジャンプ数が表示されます。 赤色では、宛先ネットワークに到達するために必要なジャンプの数。",
       intro_ttl_count:"ここに、パケットの残りの有効期間（Time To Live）があります。 この値はジャンプごとに1ずつ減少します。 パケットが宛先に到着する前に0に達すると、送信は失敗します。 これはパケットが無限のルーティングループで終わるのを防ぐためです。",
       link:"アンケート",
+
   }
   ,fr:{
       place_router:"Veuillez cliquer à l'endroit où vous désirez placer le routeur.",
@@ -259,7 +261,6 @@ app.translations = {
     intro_step:"Use este botão para iniciar a simulação animada no modo passo a passo.",
     intro_add:"Use este botão para retornar à tela de criação de rede.",
     intro_speed:"Use este menu suspenso para alterar a velocidade da animação.",
-    intro_step3:"Agora que a rede está configurada, o programa poderá iniciar uma simulação animada do caminho percorrido por um pacote entre dois hosts.",
     explanations:"Explicar",
     intro_explanations:"Use este botão para ler explicações de como a simulação funciona.",
     intro_table_row:"Esta tabela descreve toda a rede criada para a simulação. A rede de destino está escrita em vermelho.",
@@ -269,6 +270,7 @@ app.translations = {
     intro_metric:"Esta coluna lista o número de saltos necessários para alcançar a rede descrita à esquerda. Em vermelho, o número de salto necessário para alcançar a rede de destino.",
     intro_ttl_count:"Aqui está o tempo de vida restante (Time To Live) do pacote. Esse valor diminui em 1 em cada salto. Se atingir 0 antes do pacote chegar ao destino, a transmissão falhará. Isto é para evitar que o pacote termine em um loop de roteamento infinito.",
     link:"Classificação questionário",
+
   }
 };
 
