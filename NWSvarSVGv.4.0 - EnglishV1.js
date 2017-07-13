@@ -4,9 +4,14 @@
 */
 
 /*
-TODO: Changement de langue au début, puis impossible
-4*Google Form
-Re-check traductions depuis l'anglais
+TODO:4*Google Form
+
+Link to the Questionnaire :
+FR :
+EN :
+JP :
+PT :
+
 */
 
 var M=new Array(12);  // 盤面情報配列
@@ -78,8 +83,8 @@ app.translations = {
       cancel:"Back",
       intro_step2:"Select the sending host, and then press 'Confirm'. Then select the receiving host, and then press 'Confirm'. You can return to the previous screen by pressing 'Back'.",
       intro_start:"Use this button to start the complete automated animation.",
-      intro_step:"Use this button to start step-by-step animation.",
-      intro_add:"Use this button to return to the network modification screen.",
+      intro_step:"Use this button to start the step-by-step animation.",
+      intro_modify:"Use this button to return to the network modification screen.",
       intro_speed:"Use this drop-down menu to change the speed of the animation.",
       intro_step3:"Now that the network is configured, the program will be able to launch an animated simulation of the path traversed by a packet between two hosts.",
       explanations:"Explain",
@@ -87,10 +92,11 @@ app.translations = {
       intro_table_row:"This table describes the entire network created for the simulation. The destination network is written in red.",
       intro_destination:"This column lists the network addresses created for this simulation. In red, the destination network address.",
       intro_interface:"This column lists the interfaces of the current router. In red, the interface that will be used for the next hop.",
-      intro_nexthop:"This column lists the IP addresses that can be reached on the next hop. In red, the IP address of the next router, or the destination host if only one jump is required.",
-      intro_metric:"This column lists the number of jumps needed to reach the network described on the left. In red, the number of jump required to reach the destination network.",
+      intro_nexthop:"This column lists the IP addresses that can be reached on the next hop. In red, the IP address of the next router, or the destination host if only one hop is required.",
+      intro_metric:"This column lists the number of hops needed to reach the network described on the left. In red, the number of hop required to reach the destination network.",
       intro_ttl_count:"Here is the remaining lifetime (Time To Live) of the packet. This value decreases by 1 every hop. If it reaches 0 before the packet arrives at destination, the packet transmission fails. This is to prevent the packet from ending up in an infinite routing loop.",
       link:"Questionnaire",
+      url:"https://goo.gl/KVmpQw",
   }
   ,ja:{
       place_router:"ルータを配置したい場所をクリックしてください。",
@@ -103,14 +109,14 @@ app.translations = {
       confirm:"確定",
       choose_destination_click:"受信機を選択してください。",
       same_sender_and_receiver:"発信元と送信先が同じです。",
-      destination_address:"送信先アドレス : ",
+      destination_address:"宛先IPアドレス： ",
       hover:"カーソルをオブジェクトの上に合わせると、そのオブジェクトが持つIPアドレスを表示します。",
       quick_speed:"高速",
       medium_speed:"中速",
       slow_speed:"低速",
       start:"スタート",
       step_by_step:"詳しく",
-      modify:"追加",
+      modify:"変更",
       router:"ルータ",
       host:"ホスト",
       path:"経路",
@@ -125,31 +131,32 @@ app.translations = {
       right:"右",
       left:"左",
       help:"手助け",
-      intro_first_start:"このプログラムは、特に、ルータを介して別のホストからのパケットの送信、ネットワークの動作をシミュレートします。最初に開始するためにそれらを一緒に接続し、ルータとホストを追加します。注意：それはそれはアイテムを選択することであってもよい、あなたは少しその下をクリックする必要があります。この不便をおかけして申し訳ございません。",
+      intro_first_start:"このプログラムは、ネットワークの動作、特にルータを介してあるホストから別のホストへのパケットの送信をシミュレートすることを可能にする。 最初にルータとホストを追加し、それらを相互に接続して開始します。",
       intro:"このプログラムは、ネットワークの動作をシミュレートすることができます。特に、ルータを経由してあるホストから別のホストにパケットを送信します。",
       intro_router:"このボタンを使用して、現在のネットワークにルータを追加します。",
       intro_host:"このボタンを使用して、現在のネットワークにホストを追加します。",
       intro_path:"このボタンを使用して、2つのオブジェクトを相互にリンクします。 警告：ホストは1つのオブジェクトにしかリンクできません！",
-      intro_confirm:"ネットワークが完成したら、ここをクリックして続行してください。",
-      intro_clear:"このボタンを使用して現在のネットワークを削除します。",
+      intro_confirm:"ネットワークが完了したら、このボタンを使用して続行します。",
+      intro_clear:"現在のネットワーク全体を削除するには、このボタンを使用します。",
       intro_help:"このプレゼンテーションを再度表示するには、このボタンを使用します。",
-      intro_language:"このドロップダウンメニューを使用して、このソフトウェアの言語を変更します。",
+      intro_language:"このドロップダウンメニューを使用して、インタフェース言語を変更します。",
       cancel:"バック",
-      intro_step2:"送信ホストを選択し、[確定]をタップします。 その後、受信ホストを選択し、[確定]をタップします。 [バック]をタップすると、前の画面に戻ることができます。",
-      intro_start:"このボタンを使用して、完全なアニメーションシミュレーションを開始します。",
-      intro_step:"ステップバイステップモードでアニメーションシミュレーションを開始するには、このボタンを使用します。",
-      intro_add:"このボタンを使用してネットワーク作成画面に戻ります。",
+      intro_step2:"送信ホストを選択し、「確定」を押します。 受信ホストを選択して、「確定」を押します。 「バック」を押すと、前の画面に戻ることができます。",
+      intro_start:"このボタンを使用して、完全自動アニメーションを開始します。",
+      intro_step:"このボタンを使用して、ステップバイステップのアニメーションを開始します。",
+      intro_modify:"このボタンを使用して、ネットワーク変更画面に戻ります。",
       intro_speed:"このドロップダウンメニューを使用してアニメーションの速度を変更する。",
       intro_step3:"ネットワークが設定されたので、プログラムは、2つのホスト間のパケットが通過するパスのアニメーションシミュレーションを起動できます。",
       explanations:"説明",
-      intro_explanations:"このボタンを使用して、シミュレーションの仕組みを説明します。",
+      intro_explanations:"このボタンを使用して、シミュレーション結果に関する説明を読んでください。",
       intro_table_row:"この表は、シミュレーション用に作成されたネットワーク全体を示しています。 宛先ネットワークは赤で書かれています。",
-      intro_destination:"この列には、このシミュレーション用に作成されたネットワークアドレスが表示されます。 これは、現在のルータが配置されていないネットワークに対応します。 赤色で、到達したいネットワークアドレス。",
-      intro_interface:"この列には、現在のルータのインターフェイス、つまり左側に記載されているネットワークに到達するためのパスが表示されます。 赤色では、次のジャンプに使用されるインターフェイスです。",
-      intro_nexthop:"この列には、次のホップで到達できるIPアドレスがリストされます。 赤色では、次のルータのIPアドレス、または1回だけのジャンプが必要な場合の宛先ホスト。",
+      intro_destination:"この列には、このシミュレーション用に作成されたネットワークアドレスが表示されます。 赤色では、宛先ネットワークアドレス。",
+      intro_interface:"この列には、現在のルータのインターフェイスが一覧表示されます。 赤色では、次のホップに使用されるインターフェイスです。",
+      intro_nexthop:"この列には、次のホップで到達できるIPアドレスがリストされます。 赤色では、次のルータのIPアドレス、またはホップが1つだけ必要な場合の宛先ホスト。",
       intro_metric:"この列には、左に記載されているネットワークに到達するために必要なジャンプ数が表示されます。 赤色では、宛先ネットワークに到達するために必要なジャンプの数。",
-      intro_ttl_count:"ここに、パケットの残りの有効期間（Time To Live）があります。 この値はジャンプごとに1ずつ減少します。 パケットが宛先に到着する前に0に達すると、送信は失敗します。 これはパケットが無限のルーティングループで終わるのを防ぐためです。",
+      intro_ttl_count:"ここに、パケットの残りの有効期間（Time To Live）があります。 この値は1ホップ毎に1ずつ減少します。 パケットが宛先に到着する前に0に達すると、パケットの送信は失敗します。 これはパケットが無限のルーティングループで終わるのを防ぐためです。",
       link:"アンケート",
+      url:"https://goo.gl/1nBUPX",
   }
   ,fr:{
       place_router:"Veuillez cliquer à l'endroit où vous désirez placer le routeur.",
@@ -184,7 +191,7 @@ app.translations = {
       right:"à droite",
       left:"à gauche",
       help:"Aide",
-      intro_first_start:"Ce programme permet de simuler le fonctionnement d'un réseau, en particulier l'envoi de paquets d'un hôte à un autre via des routeurs. Ajoutez d'abord des routeurs et des hôtes, puis reliez-les entre eux pour commencer. Note: il se peut que pour sélectionner un élément, vous ayez besoin de cliquer un peu en dessous de celui-ci. Veuillez nous excuser pour ce désagrément.",
+      intro_first_start:"Ce programme permet de simuler le fonctionnement d'un réseau, en particulier l'envoi de paquets d'un hôte à un autre via des routeurs. Ajoutez d'abord des routeurs et des hôtes, puis reliez-les entre eux pour commencer.",
       intro:"Ce programme permet de simuler le fonctionnement d'un réseau, en particulier l'envoi de paquets d'un hôte à un autre via des routeurs.",
       intro_router:"Utilisez ce bouton pour ajouter un routeur au réseau actuel.",
       intro_host:"Utilisez ce bouton pour ajouter un hôte au réseau actuel.",
@@ -197,7 +204,7 @@ app.translations = {
       intro_step2:"Sélectionnez l'hôte émetteur, puis appuyez sur 'Confirmer'. Puis sélectionnez l'hôte récepteur, puis appuyez sur 'Confirmer'. Vous pouvez retourner sur l'écran précédent en appuyant sur 'Retour'.",
       intro_start:"Utilisez ce bouton pour lancer la simulation animée complète.",
       intro_step:"Utilisez ce bouton pour lancer la simulation animée en mode étape par étape.",
-      intro_add:"Utilisez ce bouton pour revenir à l'écran de modification du réseau.",
+      intro_modify:"Utilisez ce bouton pour revenir à l'écran de modification du réseau.",
       intro_speed:"Utilisez ce menu déroulant pour changer la vitesse de l'animation.",
       intro_step3:"Maintenant que le réseau est configuré, le programme va pouvoir lancer une simulation animée du trajet parcouru par un paquet entre deux hôtes.",
       explanations:"Explications",
@@ -208,7 +215,8 @@ app.translations = {
       intro_nexthop:"Cette colonne liste les adresses IP qui peuvent être atteinte lors du prochain hop. En rouge, l'adresse IP du prochain routeur, ou de l'hôte de destination s'il ne reste plus qu'un hop nécessaire.",
       intro_metric:"Cette colonne liste le nombre de hop nécessaire pour atteindre le réseau de gauche. En rouge, le nombre de hop nécessaire pour atteindre le réseau de destination.",
       intro_ttl_count:"Ici, la durée de vie restante (Time To Live) du paquet. Cette valeur décroit de 1 à chaque hop. Si elle atteint 0 avant que le paquet soit arrivé à destination, la transmission du packet échoue. Cela sert à éviter que le paquet ne se retrouve dans une boucle de routage infinie.",
-      link:"Questionnaire"
+      link:"Questionnaire",
+      url:"https://goo.gl/wDZFDh",
   },
   pt:
   {
@@ -257,7 +265,7 @@ app.translations = {
     intro_step2:"Selecione o host de envio e, em seguida, toque em Confirmar. Em seguida, selecione o host de recebimento e depois toque em Confirmar. Você pode voltar à tela anterior pressionando Retorno.",
     intro_start:"Use este botão para iniciar a simulação animada completa.",
     intro_step:"Use este botão para iniciar a simulação animada no modo passo a passo.",
-    intro_add:"Use este botão para retornar à tela de criação de rede.",
+    intro_modify:"Use este botão para retornar à tela de criação de rede.",
     intro_speed:"Use este menu suspenso para alterar a velocidade da animação.",
     intro_step3:"Agora que a rede está configurada, o programa poderá iniciar uma simulação animada do caminho percorrido por um pacote entre dois hosts.",
     explanations:"Explicar",
@@ -268,7 +276,8 @@ app.translations = {
     intro_nexthop:"Esta coluna lista os endereços IP que podem ser alcançados no próximo salto. Em vermelho, o endereço IP do próximo roteador ou o host de destino, se apenas um salto for necessário.",
     intro_metric:"Esta coluna lista o número de saltos necessários para alcançar a rede descrita à esquerda. Em vermelho, o número de salto necessário para alcançar a rede de destino.",
     intro_ttl_count:"Aqui está o tempo de vida restante (Time To Live) do pacote. Esse valor diminui em 1 em cada salto. Se atingir 0 antes do pacote chegar ao destino, a transmissão falhará. Isto é para evitar que o pacote termine em um loop de roteamento infinito.",
-    link:"Classificação questionário",
+    link:"Questionário",
+    url:"https://goo.gl/Q5nMSZ",
   }
 };
 
@@ -358,7 +367,7 @@ function help_step3(){
       },
       {
         element: '#modify_button',
-        intro:getText("intro_add")
+        intro:getText("intro_modify")
       },
       {
         element:"#clear_button",
@@ -427,6 +436,7 @@ function language_change(){
   var language = document.getElementById("language_select").options[idx].value;
   currentLanguage = language;
   init();
+  start();
 }
 
 
@@ -578,6 +588,7 @@ function rout(){  // 経路ボタンを押した
 }
 
 function set() {  // 確定ボタンを押した
+  document.getElementById("language_select").style.display = "none";
   var i,j;
   flag=-1;
   document.getElementById('btn').innerHTML="";
@@ -863,22 +874,27 @@ function decision()
       destination();
     }else{
       if (document.all) { // for IE
-        paper2.text(115,15,getText('destination_address')+IPad[destine.i].ads[0].add).attr({"font-size":"15","font-family":"ＭＳ ゴシック"});
+        paper2.text(150,15,getText('destination_address')+IPad[destine.i].ads[0].add).attr({"font-size":"15","font-family":"ＭＳ ゴシック"});
       } else {
-        paper2.text(105,15,getText('destination_address')+IPad[destine.i].ads[0].add).attr("font-size","15");
+        paper2.text(150,15,getText('destination_address')+IPad[destine.i].ads[0].add).attr("font-size","15");
       }
       document.getElementById('IP_Indication').innerHTML=getText('hover');
+      var link_element = document.getElementById('link');
+      link_element.innerHTML=getText('link');
+      link_element.href=getText('url');
+      link_element.style.display="inline-block";
       document.getElementById('btn').innerHTML=
             "<input type='button' value="+getText('start')+" onClick='anime_start(this.form)' id='start_button'>"
             + "<input type='button' value="+getText('step_by_step')+" onClick='stepc()' id='step_button'>"
             + "<input type='button' value="+getText('modify')+" onClick='init()' id='modify_button'>"
             + "<input type='button' value="+getText('help')+" onClick='help_step3()' id='help_button'>"
             + "<input type='button' value="+getText('explanations')+ " onClick='explanations()' id='explanations_button' >"
-            + "<select name='speed' size='1' id='speed_menu'>"
+            + "<select name='speed' id='speed_menu'>"
             + "<option value='0'>"+getText('quick_speed')+"</option>"
             + "<option value='200' selected>"+getText('medium_speed')+"</option>"
             + "<option value='600'>"+getText('slow_speed')+"</option>"
             + "</select>";
+
     }
   }
 }
@@ -888,6 +904,8 @@ function init()
 {
   app.lang = app.translations[currentLanguage] || app.translations.en;
   //document.getElementById('link').innerHTML=""+getText('link');
+  document.getElementById("language_select").style.display = "inline-block";
+  document.getElementById("link").style.display = "none";
   document.getElementById('TableRow').innerHTML="<th id='destination'>"+getText('destination_network')+"</th><th id='interface'>"+getText('interface')
   +"</th><th id='nexthop'>"+getText('nexthop')
   +"</th><th id='metric'>"+getText('metric')
