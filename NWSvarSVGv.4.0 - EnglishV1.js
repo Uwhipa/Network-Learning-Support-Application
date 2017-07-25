@@ -3,17 +3,6 @@
   Translated by M. Lorkan Sauvion
 */
 
-/*
-TODO:4*Google Form
-
-Link to the Questionnaire :
-FR :
-EN :
-JP :
-PT :
-
-*/
-
 var M=new Array(12);  // 盤面情報配列
 var IP;               // IPアドレス
 var cnt;
@@ -879,10 +868,6 @@ function decision()
         paper2.text(150,15,getText('destination_address')+IPad[destine.i].ads[0].add).attr("font-size","15");
       }
       document.getElementById('IP_Indication').innerHTML=getText('hover');
-      var link_element = document.getElementById('link');
-      link_element.innerHTML=getText('link');
-      link_element.href=getText('url');
-      link_element.style.display="inline-block";
       document.getElementById('btn').innerHTML=
             "<input type='button' value="+getText('start')+" onClick='anime_start(this.form)' id='start_button'>"
             + "<input type='button' value="+getText('step_by_step')+" onClick='stepc()' id='step_button'>"
@@ -893,7 +878,8 @@ function decision()
             + "<option value='0'>"+getText('quick_speed')+"</option>"
             + "<option value='200' selected>"+getText('medium_speed')+"</option>"
             + "<option value='600'>"+getText('slow_speed')+"</option>"
-            + "</select>";
+            + "</select>"
+            + "<a id='link' href="+getText('url')+">"+getText('link')+"</a>";
 
     }
   }
@@ -903,9 +889,7 @@ function decision()
 function init()
 {
   app.lang = app.translations[currentLanguage] || app.translations.en;
-  //document.getElementById('link').innerHTML=""+getText('link');
   document.getElementById("language_select").style.display = "inline-block";
-  document.getElementById("link").style.display = "none";
   document.getElementById('TableRow').innerHTML="<th id='destination'>"+getText('destination_network')+"</th><th id='interface'>"+getText('interface')
   +"</th><th id='nexthop'>"+getText('nexthop')
   +"</th><th id='metric'>"+getText('metric')
