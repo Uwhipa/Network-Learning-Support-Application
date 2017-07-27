@@ -334,6 +334,7 @@ var currentLanguage = document.documentElement.lang || "en";
 
 var first_time_step_one = 1;
 var first_time_step_two = 1;
+var show_help2 = 0;
 
 function start(){
   var introJS = introJs();
@@ -419,10 +420,6 @@ function help_step3(){
         intro:getText("intro_modify")
       },
       {
-        element:"#clear_button",
-        intro:getText("intro_clear")
-      },
-      {
         element:"#explanations_button",
         intro:getText("intro_explanations")
       },
@@ -484,6 +481,7 @@ function language_change(){
   var idx = document.getElementById("language_select").selectedIndex;
   var language = document.getElementById("language_select").options[idx].value;
   currentLanguage = language;
+  show_help2 = 1;
   init();
   start();
 }
@@ -753,9 +751,10 @@ function addressing()
 // 発信元の選択
 function originating()
 {
-  if(first_time_step_two == 1) {
+  if(first_time_step_two == 1 || show_help2 == 1) {
     help_step2();
     first_time_step_two = 0;
+    show_help2 = 0;
   }
   flag=30;
   document.getElementById('IP_Indication').innerHTML=getText('choose_sender');
